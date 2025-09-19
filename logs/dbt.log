@@ -1,0 +1,222 @@
+[0m12:12:53.988351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BE389ACB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BE389A7650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BE389AD050>]}
+
+
+============================== 12:12:54.112292 | 7b8e9ef5-e671-44a8-bc1a-cf46965ebf64 ==============================
+[0m12:12:54.112292 [info ] [MainThread]: Running with dbt=1.7.9
+[0m12:22:46.503876 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\AKE\\.dbt', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt init career_services_analytics', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True'}
+[0m12:22:46.550750 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/AKE/.dbt')}
+[0m12:22:46.691331 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m12:22:46.894501 [debug] [MainThread]: Starter project path: C:\Users\AKE\Desktop\my_dbt_project\venv\Lib\site-packages\dbt\include\starter_project
+[0m12:22:52.769479 [info ] [MainThread]: 
+Your new dbt project "career_services_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:22:52.769479 [info ] [MainThread]: Setting up your profile.
+[0m12:23:17.472592 [info ] [MainThread]: Profile career_services_analytics written to C:\Users\AKE\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m12:23:17.472592 [debug] [MainThread]: Command `dbt init` succeeded at 12:23:17.472592 after 625.18 seconds
+[0m12:23:17.472592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BE31ECCC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BE31ECC210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BE389A7ED0>]}
+[0m12:23:17.488208 [debug] [MainThread]: Flushing usage events
+[0m13:19:19.149467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A1F3F5450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A1F43A310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A1F43B290>]}
+
+
+============================== 13:19:19.415098 | b1084235-0022-4ab5-bef6-8cc0c019d923 ==============================
+[0m13:19:19.415098 [info ] [MainThread]: Running with dbt=1.7.9
+[0m13:19:19.430727 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\AKE\\.dbt', 'static_parser': 'True', 'write_json': 'True'}
+[0m13:19:19.430727 [info ] [MainThread]: dbt version: 1.7.9
+[0m13:19:19.430727 [info ] [MainThread]: python version: 3.11.4
+[0m13:19:19.430727 [info ] [MainThread]: python path: C:\Users\AKE\Desktop\my_dbt_project\venv\Scripts\python.exe
+[0m13:19:19.446347 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m13:19:21.774492 [info ] [MainThread]: Using profiles dir at C:\Users\AKE\.dbt
+[0m13:19:21.774492 [info ] [MainThread]: Using profiles.yml file at C:\Users\AKE\.dbt\profiles.yml
+[0m13:19:21.790103 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml
+[0m13:19:21.790103 [info ] [MainThread]: adapter type: mysql
+[0m13:19:21.790103 [info ] [MainThread]: adapter version: 1.7.0
+[0m13:19:21.790103 [info ] [MainThread]: Configuration:
+[0m13:19:21.790103 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:19:21.790103 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:19:21.790103 [info ] [MainThread]: Required dependencies:
+[0m13:19:21.790103 [debug] [MainThread]: Executing "git --help"
+[0m13:19:23.555769 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:19:23.555769 [debug] [MainThread]: STDERR: "b''"
+[0m13:19:23.555769 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:19:23.555769 [info ] [MainThread]: Connection:
+[0m13:19:23.555769 [info ] [MainThread]:   server: localhost
+[0m13:19:23.571372 [info ] [MainThread]:   unix_socket: None
+[0m13:19:23.571372 [info ] [MainThread]:   port: 3306
+[0m13:19:23.571372 [info ] [MainThread]:   database: None
+[0m13:19:23.571372 [info ] [MainThread]:   schema: career_services_db
+[0m13:19:23.571372 [info ] [MainThread]:   user: root
+[0m13:19:23.587021 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m13:19:23.680715 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m13:19:23.680715 [debug] [MainThread]: Using mysql connection "debug"
+[0m13:19:23.680715 [debug] [MainThread]: On debug: select 1 as id
+[0m13:19:23.680715 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:19:42.582332 [debug] [MainThread]: SQL status: SUCCESS 1 in 19.0 seconds
+[0m13:19:42.582332 [debug] [MainThread]: On debug: Close
+[0m13:19:42.660410 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:19:42.676037 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:19:42.676037 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml> not found
+
+[0m13:19:42.676037 [debug] [MainThread]: Command `dbt debug` failed at 13:19:42.676037 after 24.48 seconds
+[0m13:19:42.676037 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:19:42.691683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A1E871350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A1F40B710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A186FAE10>]}
+[0m13:19:42.691683 [debug] [MainThread]: Flushing usage events
+[0m13:26:07.397222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E1B938ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E1B916750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E1B915150>]}
+
+
+============================== 13:26:07.553438 | 9e2ade1a-21d3-4218-b77d-1a03e5148b59 ==============================
+[0m13:26:07.553438 [info ] [MainThread]: Running with dbt=1.7.9
+[0m13:26:07.553438 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\AKE\\.dbt', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'printer_width': '80', 'quiet': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])'}
+[0m13:26:07.553438 [info ] [MainThread]: dbt version: 1.7.9
+[0m13:26:07.569057 [info ] [MainThread]: python version: 3.11.4
+[0m13:26:07.569057 [info ] [MainThread]: python path: C:\Users\AKE\Desktop\my_dbt_project\venv\Scripts\python.exe
+[0m13:26:07.569057 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m13:26:09.850304 [info ] [MainThread]: Using profiles dir at C:\Users\AKE\.dbt
+[0m13:26:09.850304 [info ] [MainThread]: Using profiles.yml file at C:\Users\AKE\.dbt\profiles.yml
+[0m13:26:09.850304 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml
+[0m13:26:09.850304 [info ] [MainThread]: adapter type: mysql
+[0m13:26:09.850304 [info ] [MainThread]: adapter version: 1.7.0
+[0m13:26:09.850304 [info ] [MainThread]: Configuration:
+[0m13:26:09.850304 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:26:09.850304 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:26:09.850304 [info ] [MainThread]: Required dependencies:
+[0m13:26:09.865948 [debug] [MainThread]: Executing "git --help"
+[0m13:26:10.959675 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:26:10.959675 [debug] [MainThread]: STDERR: "b''"
+[0m13:26:10.959675 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:26:10.959675 [info ] [MainThread]: Connection:
+[0m13:26:10.959675 [info ] [MainThread]:   server: localhost
+[0m13:26:10.959675 [info ] [MainThread]:   unix_socket: None
+[0m13:26:10.959675 [info ] [MainThread]:   port: 3306
+[0m13:26:10.959675 [info ] [MainThread]:   database: None
+[0m13:26:10.959675 [info ] [MainThread]:   schema: career_services_db
+[0m13:26:10.959675 [info ] [MainThread]:   user: root
+[0m13:26:10.959675 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m13:26:11.006583 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m13:26:11.006583 [debug] [MainThread]: Using mysql connection "debug"
+[0m13:26:11.006583 [debug] [MainThread]: On debug: select 1 as id
+[0m13:26:11.006583 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:26:17.723020 [debug] [MainThread]: SQL status: SUCCESS 1 in 7.0 seconds
+[0m13:26:17.738610 [debug] [MainThread]: On debug: Close
+[0m13:26:17.848020 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:26:17.848020 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:26:17.848020 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml> not found
+
+[0m13:26:17.863611 [debug] [MainThread]: Command `dbt debug` failed at 13:26:17.863611 after 11.83 seconds
+[0m13:26:17.863611 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:26:17.863611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E1B77C710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E14ECC310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E14ECC090>]}
+[0m13:26:17.863611 [debug] [MainThread]: Flushing usage events
+[0m13:27:12.354245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B5EAB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B5D8A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024208ED12D0>]}
+
+
+============================== 13:27:12.354245 | 362c25c0-cabf-430d-99af-1d0d4f522e0e ==============================
+[0m13:27:12.354245 [info ] [MainThread]: Running with dbt=1.7.9
+[0m13:27:12.354245 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\AKE\\.dbt', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])'}
+[0m13:27:12.354245 [info ] [MainThread]: dbt version: 1.7.9
+[0m13:27:12.354245 [info ] [MainThread]: python version: 3.11.4
+[0m13:27:12.369887 [info ] [MainThread]: python path: C:\Users\AKE\Desktop\my_dbt_project\venv\Scripts\python.exe
+[0m13:27:12.369887 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m13:27:12.588638 [info ] [MainThread]: Using profiles dir at C:\Users\AKE\.dbt
+[0m13:27:12.588638 [info ] [MainThread]: Using profiles.yml file at C:\Users\AKE\.dbt\profiles.yml
+[0m13:27:12.588638 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml
+[0m13:27:12.588638 [info ] [MainThread]: adapter type: mysql
+[0m13:27:12.604263 [info ] [MainThread]: adapter version: 1.7.0
+[0m13:27:12.604263 [info ] [MainThread]: Configuration:
+[0m13:27:12.604263 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:27:12.604263 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:27:12.604263 [info ] [MainThread]: Required dependencies:
+[0m13:27:12.604263 [debug] [MainThread]: Executing "git --help"
+[0m13:27:13.135512 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:27:13.151121 [debug] [MainThread]: STDERR: "b''"
+[0m13:27:13.151121 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:27:13.151121 [info ] [MainThread]: Connection:
+[0m13:27:13.151121 [info ] [MainThread]:   server: localhost
+[0m13:27:13.151121 [info ] [MainThread]:   unix_socket: None
+[0m13:27:13.151121 [info ] [MainThread]:   port: 3306
+[0m13:27:13.151121 [info ] [MainThread]:   database: None
+[0m13:27:13.151121 [info ] [MainThread]:   schema: career_services_db
+[0m13:27:13.151121 [info ] [MainThread]:   user: root
+[0m13:27:13.166742 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m13:27:13.166742 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m13:27:13.166742 [debug] [MainThread]: Using mysql connection "debug"
+[0m13:27:13.166742 [debug] [MainThread]: On debug: select 1 as id
+[0m13:27:13.166742 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:27:13.588663 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m13:27:13.588663 [debug] [MainThread]: On debug: Close
+[0m13:27:13.588663 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:27:13.604251 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:27:13.604251 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml> not found
+
+[0m13:27:13.604251 [debug] [MainThread]: Command `dbt debug` failed at 13:27:13.604251 after 1.58 seconds
+[0m13:27:13.619916 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:27:13.619916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B639710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B63BDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B63BF10>]}
+[0m13:27:13.619916 [debug] [MainThread]: Flushing usage events
+[0m13:29:06.872313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220540E53D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002205410A910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022054108450>]}
+
+
+============================== 13:29:06.887937 | 33c05838-a5f0-4aa2-9177-fc5b1b497819 ==============================
+[0m13:29:06.887937 [info ] [MainThread]: Running with dbt=1.7.9
+[0m13:29:06.887937 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\AKE\\.dbt', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True'}
+[0m13:29:06.887937 [info ] [MainThread]: dbt version: 1.7.9
+[0m13:29:06.887937 [info ] [MainThread]: python version: 3.11.4
+[0m13:29:06.887937 [info ] [MainThread]: python path: C:\Users\AKE\Desktop\my_dbt_project\venv\Scripts\python.exe
+[0m13:29:06.887937 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m13:29:07.137949 [info ] [MainThread]: Using profiles dir at C:\Users\AKE\.dbt
+[0m13:29:07.169183 [info ] [MainThread]: Using profiles.yml file at C:\Users\AKE\.dbt\profiles.yml
+[0m13:29:07.169183 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml
+[0m13:29:07.184807 [info ] [MainThread]: adapter type: mysql
+[0m13:29:07.184807 [info ] [MainThread]: adapter version: 1.7.0
+[0m13:29:07.184807 [info ] [MainThread]: Configuration:
+[0m13:29:07.184807 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:29:07.184807 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:29:07.184807 [info ] [MainThread]: Required dependencies:
+[0m13:29:07.184807 [debug] [MainThread]: Executing "git --help"
+[0m13:29:07.919181 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:29:07.919181 [debug] [MainThread]: STDERR: "b''"
+[0m13:29:07.919181 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:29:07.919181 [info ] [MainThread]: Connection:
+[0m13:29:07.934806 [info ] [MainThread]:   server: localhost
+[0m13:29:07.934806 [info ] [MainThread]:   unix_socket: None
+[0m13:29:07.934806 [info ] [MainThread]:   port: 3306
+[0m13:29:07.934806 [info ] [MainThread]:   database: None
+[0m13:29:07.934806 [info ] [MainThread]:   schema: career_services_db
+[0m13:29:07.934806 [info ] [MainThread]:   user: root
+[0m13:29:07.934806 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m13:29:07.934806 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m13:29:07.934806 [debug] [MainThread]: Using mysql connection "debug"
+[0m13:29:07.950454 [debug] [MainThread]: On debug: select 1 as id
+[0m13:29:07.950454 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:29:08.294190 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m13:29:08.294190 [debug] [MainThread]: On debug: Close
+[0m13:29:08.294190 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:29:08.294190 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:29:08.294190 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\AKE\Desktop\my_dbt_project\dbt_project.yml> not found
+
+[0m13:29:08.309829 [debug] [MainThread]: Command `dbt debug` failed at 13:29:08.309829 after 1.93 seconds
+[0m13:29:08.309829 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:29:08.309829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220540F8D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220541819D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002204D3DB990>]}
+[0m13:29:08.309829 [debug] [MainThread]: Flushing usage events

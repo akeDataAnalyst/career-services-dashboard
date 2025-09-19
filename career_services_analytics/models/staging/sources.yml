@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: career_services_db
+    database: career_services_db
+    schema: career_services_db
+    tables:
+      - name: users
+      - name: job_applications
+      - name: profile_views
+      - name: course_enrollments
+      - name: resume_uploads
+      - name: career_assessments
