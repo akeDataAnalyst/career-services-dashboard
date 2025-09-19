@@ -24,6 +24,12 @@ The dashboard provides a clear view into user activity and platform health, incl
 * **User Acquisition by Country:** A bar chart visualizing the geographic distribution of new users.
 * **Feature Adoption Rates:** A bar chart that measures how many users have engaged with key features such as resume uploads, job applications, and course enrollment.
 
+  ![](dau.PNG)
+
+  ![](uac.PNG)
+
+  ![](fad.PNG)
+
 <br>
 
 ## Project Structure
