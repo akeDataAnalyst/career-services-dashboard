@@ -1,27 +1,30 @@
-import os
-from dotenv import load_dotenv
+import streamlit as st
 import pandas as pd
 import mysql.connector
-from dash import Dash, dcc, html
-from dash.dependencies import Input, Output
+import os
 import plotly.express as px
+from dotenv import load_dotenv
 
 # Load environment variables from the .env file
 load_dotenv()
 
-# Database connection details, now securely read from environment variables
+# --- Print for debugging to confirm .env file is loaded ---
+print("Attempting to load database configuration...")
 db_config = {
     "host": os.getenv("DB_HOST"),
     "user": os.getenv("DB_USER"),
     "password": os.getenv("DB_PASSWORD"),
     "database": os.getenv("DB_DATABASE")
 }
+print(f"Database Config: {db_config}")
+print("-" * 20)
 
 def get_data():
     """Connects to MySQL and fetches data from dbt models."""
     try:
         # Connect to the MySQL database
         conn = mysql.connector.connect(**db_config)
+        print("Successfully connected to MySQL database.")
         
         # Use a cursor with dictionary=True to ensure column names are returned as keys
         cursor = conn.cursor(dictionary=True)
@@ -39,7 +42,8 @@ def get_data():
         return fact_df, dim_df
         
     except mysql.connector.Error as e:
-        print(f"Error fetching data: {e}")
+        print(f"Error fetching data from MySQL: {e}")
+        st.error(f"Error fetching data from MySQL: {e}. Please check your database connection.")
         # Return empty DataFrames on error to prevent the app from crashing
         return pd.DataFrame(), pd.DataFrame()
     finally:
@@ -52,84 +56,49 @@ def get_data():
 fact_df, dim_df = get_data()
 df = pd.merge(fact_df, dim_df, on='user_id', how='left')
 
-# Initialize the Dash app
-app = Dash(__name__)
+# Check if the DataFrame is empty and display a warning
+if df.empty:
+    st.warning("No data found. Please ensure your database is running and dbt models have been built. Check the terminal for error messages.")
+else:
+    # Convert 'registration_date_x' to datetime objects
+    df['registration_date'] = pd.to_datetime(df['registration_date_x'])
 
-# Define the layout of the dashboard
-app.layout = html.Div(children=[
-    html.H1(children='Career Services User Behavior Analytics', style={'textAlign': 'center'}),
-    
-    html.Div(className='container', children=[
-        html.Div(className='graph-card', children=[
-            dcc.Graph(id='dau-mau-graph'),
-        ]),
-        html.Div(className='graph-card', children=[
-            dcc.Graph(id='country-graph'),
-        ]),
-        html.Div(className='graph-card', children=[
-            dcc.Graph(id='feature-adoption-graph'),
-        ])
-    ])
-])
+    # Streamlit App Layout
+    st.title('Career Services User Behavior Analytics')
+    st.markdown("This dashboard provides a comprehensive overview of user behavior on the career services platform.")
 
-# Create a callback to generate the DAU/MAU graph
-@app.callback(
-    Output('dau-mau-graph', 'figure'),
-    [Input('dau-mau-graph', 'id')] # A dummy input to trigger the graph
-)
-def update_dau_mau_graph(input_value):
-    if df.empty:
-        return {}
-    
-    # Calculate DAU
-    dau_df = df.groupby(pd.to_datetime(df['registration_date_x']).dt.date)['user_id'].nunique().reset_index()
+    # --- DAU/MAU Graph ---
+    st.header('Daily Active Users (DAU)')
+    dau_df = df.groupby(df['registration_date'].dt.date)['user_id'].nunique().reset_index()
     dau_df.columns = ['Date', 'DAU']
-    
-    # Create the graph figure
-    fig = px.line(dau_df, x='Date', y='DAU', title='Daily Active Users')
-    return fig
+    dau_fig = px.line(dau_df, x='Date', y='DAU', title='Daily Active Users Over Time')
+    st.plotly_chart(dau_fig, use_container_width=True)
 
-# Create a callback to generate the Country Distribution graph
-@app.callback(
-    Output('country-graph', 'figure'),
-    [Input('country-graph', 'id')]
-)
-def update_country_graph(input_value):
-    if df.empty:
-        return {}
+    # --- User Acquisition by Country Graph ---
+    st.header('User Acquisition by Country')
+    country_df = df.groupby('country')['user_id'].count().reset_index()
+    country_df.columns = ['Country', 'User Count']
+    country_fig = px.bar(country_df, x='Country', y='User Count', title='User Acquisition by Country')
+    st.plotly_chart(country_fig, use_container_width=True)
 
-    country_counts = df['country'].value_counts().reset_index()
-    country_counts.columns = ['Country', 'User_Count']
-    fig = px.bar(country_counts, x='Country', y='User_Count', title='Users by Country')
-    return fig
-
-# Create a callback to generate the Feature Adoption graph
-@app.callback(
-    Output('feature-adoption-graph', 'figure'),
-    [Input('feature-adoption-graph', 'id')] # A dummy input
-)
-def update_feature_adoption_graph(input_value):
-    if df.empty:
-        return {}
-        
-    # Calculate feature adoption rates
+    # --- Feature Adoption Graph ---
+    st.header('Feature Adoption Rates')
     total_users = len(df['user_id'].unique())
-    if total_users == 0:
-        return {}
+    if total_users > 0:
+        adoption_rates = {
+            'Resumes Uploaded': (df['total_resumes_uploaded'] > 0).sum() / total_users,
+            'Applications Submitted': (df['total_applications'] > 0).sum() / total_users,
+            'Courses Enrolled': (df['total_courses_enrolled'] > 0).sum() / total_users,
+            'Assessments Taken': (df['total_assessments_taken'] > 0).sum() / total_users,
+        }
+        adoption_df = pd.DataFrame(adoption_rates.items(), columns=['Feature', 'Adoption Rate'])
+        adoption_fig = px.bar(adoption_df, x='Feature', y='Adoption Rate', title='Feature Adoption Rates')
+        adoption_fig.update_layout(yaxis_tickformat='.0%')
+        st.plotly_chart(adoption_fig, use_container_width=True)
+    else:
+        st.write("Not enough data to calculate feature adoption.")
 
-    adoption_rates = {
-        'Resumes Uploaded': (df['total_resumes_uploaded'] > 0).sum() / total_users,
-        'Applications Submitted': (df['total_applications'] > 0).sum() / total_users,
-        'Courses Enrolled': (df['total_courses_enrolled'] > 0).sum() / total_users,
-        'Assessments Taken': (df['total_assessments_taken'] > 0).sum() / total_users,
-    }
-    
-    adoption_df = pd.DataFrame(adoption_rates.items(), columns=['Feature', 'Adoption Rate'])
-    
-    fig = px.bar(adoption_df, x='Feature', y='Adoption Rate', title='Feature Adoption Rates')
-    fig.update_layout(yaxis_tickformat='.0%')
-    return fig
-
-# Run the app
-if __name__ == '__main__':
-    app.run(debug=True)
+    # --- Raw Data Display (Optional) ---
+    st.header('Raw Data')
+    st.write("A sample of the combined data from dbt models.")
+    st.dataframe(df.head())
